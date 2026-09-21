@@ -76,6 +76,10 @@ dependencies {
     implementation(libs.okhttp.logging)
     implementation(libs.gson)
 
+    // Image loading
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+
     // Local persistence
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
