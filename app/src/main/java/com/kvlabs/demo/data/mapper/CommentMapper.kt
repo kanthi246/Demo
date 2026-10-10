@@ -6,9 +6,9 @@ import com.kvlabs.demo.domain.models.CommentsData
 import com.kvlabs.demo.domain.models.PostData
 
 fun CommentsDto.toDomain(): CommentsData {
-    return CommentsData(data = body)
+    return CommentsData(id = id,name = name,body = body)
 }
 
 fun PostDTO.toDomain(): PostData {
-    return  PostData(title = body)
+    return  PostData(title = title,body=body)
 }

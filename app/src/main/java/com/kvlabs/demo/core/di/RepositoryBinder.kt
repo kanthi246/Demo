@@ -1,7 +1,7 @@
 package com.kvlabs.demo.core.di
 
 import com.kvlabs.demo.data.repository.RepositoryImpl
-import com.kvlabs.demo.domain.repository.DataService
+import com.kvlabs.demo.domain.repository.Repository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -14,6 +14,6 @@ abstract class RepositoryBinder {
 
     @Binds
     @Singleton
-    abstract fun bindRepositoryImpl(dataServiceImpl: RepositoryImpl): DataService
+    abstract fun bindRepositoryImpl(dataServiceImpl: RepositoryImpl): Repository
 
 }
