@@ -20,28 +20,18 @@ class GetCombinedResponseUseCaseTest {
 
     @Before
     fun `setup`(){
-
         useCase  = GetCombinedResponseUseCase(repository)
-
-        val commentsData = mutableListOf<CommentsData>()
-        commentsData.add(CommentsData("Testing"))
-        commentsData.add(CommentsData("Hello"))
-        commentsData.add(CommentsData("World"))
-        commentsData.add(CommentsData("Testing"))
-
-        combinedResponse = PostAndCommentsResponse(PostData("Testing"), commentsData)
     }
 
     @Test
     fun `check the combined response`() = runTest {
 
-        val postsData = PostData("Testing")
+        val postsData = PostData("Testing","Testing Body")
 
         val commentsData = mutableListOf<CommentsData>()
-        commentsData.add(CommentsData("Testing"))
-        commentsData.add(CommentsData("Hello"))
-        commentsData.add(CommentsData("World"))
-        commentsData.add(CommentsData("Testing"))
+        commentsData.add(CommentsData(id=1,"Testing","Testing Body"))
+        commentsData.add(CommentsData(id=2,"Hello","Hello Body"))
+        commentsData.add(CommentsData(id = 3,"World", "World body"))
 
         coEvery { repository.getPost() } returns postsData
 
