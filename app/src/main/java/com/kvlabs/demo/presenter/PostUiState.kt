@@ -1,13 +1,13 @@
 package com.kvlabs.demo.presenter
 
-import com.kvlabs.demo.domain.models.PostAndCommentsResponse
+import com.kvlabs.demo.domain.models.PostWithComments
 
 sealed interface PostUiState {
 
-    object Loading: PostUiState
+    data object Loading : PostUiState
 
-    data class Success(val response: PostAndCommentsResponse): PostUiState
+    data class Success(val postWithComments: PostWithComments) : PostUiState
 
-    data class Error(val errorMessage: String): PostUiState
+    data class Error(val message: String) : PostUiState
 
 }

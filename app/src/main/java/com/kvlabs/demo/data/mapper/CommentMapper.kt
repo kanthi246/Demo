@@ -1,14 +1,10 @@
 package com.kvlabs.demo.data.mapper
 
-import com.kvlabs.demo.data.dto.CommentsDto
-import com.kvlabs.demo.data.dto.PostDTO
-import com.kvlabs.demo.domain.models.CommentsData
-import com.kvlabs.demo.domain.models.PostData
+import com.kvlabs.demo.data.dto.CommentDto
+import com.kvlabs.demo.domain.models.Comment
 
-fun CommentsDto.toDomain(): CommentsData {
-    return CommentsData(id = id,name = name,body = body)
-}
-
-fun PostDTO.toDomain(): PostData {
-    return  PostData(title = title,body=body)
-}
+fun CommentDto.toDomain(): Comment = Comment(
+    id = id,
+    name = name,
+    body = body,
+)
