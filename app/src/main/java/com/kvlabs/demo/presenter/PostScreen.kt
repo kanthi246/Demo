@@ -83,7 +83,7 @@ fun ShowPostsAndComments(response: PostAndCommentsResponse) {
             }
 
             //comments list
-            items(response.comments, key = { comment-> "comment_${comment.id}" }){ comment ->
+            items(items = response.comments, key = { comment-> "comment_${comment.id}" }){ comment ->
                 ShowCommentsList(comment)
             }
         }
