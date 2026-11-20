@@ -13,7 +13,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object NetworkModule {
+object  NetworkModule {
 
     const val BASEURL = "https://jsonplaceholder.typicode.com"
 
