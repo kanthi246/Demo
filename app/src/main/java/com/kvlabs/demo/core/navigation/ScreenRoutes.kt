@@ -1,7 +1,9 @@
 package com.kvlabs.demo.core.navigation
 
-sealed class ScreenRoutes(val route: String) {
+import kotlinx.serialization.Serializable
 
-    object PostScreen : ScreenRoutes("post_comments_screen")
 
-}
+sealed interface ScreenRoutes
+
+@Serializable
+data object PostScreen : ScreenRoutes
