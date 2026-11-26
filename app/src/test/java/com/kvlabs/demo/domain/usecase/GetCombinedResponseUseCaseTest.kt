@@ -19,7 +19,7 @@ class GetCombinedResponseUseCaseTest {
     lateinit var combinedResponse: PostAndCommentsResponse
 
     @Before
-    fun `setup`(){
+    fun setup(){
         useCase  = GetCombinedResponseUseCase(repository)
     }
 
